@@ -22,7 +22,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /var/www/
-            rm -rf landing_page_cicd
+            rm -rf MySaskProject
             git clone https://github.com/DhavalPatil1/MySaskProject.git
             cd landing_page_cicd
 
