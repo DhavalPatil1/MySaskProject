@@ -23,7 +23,7 @@ jobs:
           script: |
             cd /var/www/
             rm -rf MySaskProject
-            git clone https://github.com/DhavalPatil1/MySaskProject.git
+            git clone git@github.com:DhavalPatil1/MySaskProject.git
             cd landing_page_cicd
 
             FRONTEND_CONTAINER_ID=$(docker ps -aqf "name=frontend")
