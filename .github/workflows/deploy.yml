@@ -26,9 +26,9 @@ jobs:
             git clone git@github.com:DhavalPatil1/MySaskProject.git
             cd MySaskProject
 
-            FRONTEND_CONTAINER_ID=$(docker ps -aqf "name=frontend")
+            FRONTEND_CONTAINER_ID=$(sudo docker ps -aqf "name=frontend")
             if [ ! -z "$FRONTEND_CONTAINER_ID" ]; then
-              docker container stop $FRONTEND_CONTAINER_ID
-              docker container rm $FRONTEND_CONTAINER_ID
+              sudo docker container stop $FRONTEND_CONTAINER_ID
+              sudo docker container rm $FRONTEND_CONTAINER_ID
             fi
-            docker-compose -f docker-compose.prod.yml up -d --build
+            sudo docker-compose -f docker-compose.prod.yml up -d --build
